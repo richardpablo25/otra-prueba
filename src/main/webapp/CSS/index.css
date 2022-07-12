@@ -1,0 +1,106 @@
+.navbar {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Libre Franklin,sans-serif;
+    color: #1f1f1f;
+  }
+  :root {
+    --swiper-navigation-size: 44px;
+  }
+  :root {
+    --swiper-theme-color: #007aff;
+  }
+.card {
+  border-radius: 4px;
+	background-color: #ffffff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 12), 0 1px 2px rgba(0, 0, 0, 24) ;
+}
+
+.animado{
+
+  color: #ffffff;
+  font: normal 80px Varela Round, sans-serif;
+  height: 100px;
+  left: 0;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  animation: move linear 5000ms infinite;
+  z-index: 2
+}
+/*Animación para rotar las sombras*/
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 #da0641,
+      3px -3px 0 #da0641,
+      2px -2px 0 #da0641,
+      1px -1px 0 #da0641,
+      -4px 4px 0 hsl(17, 97%, 53%),
+      -3px 3px 0 hsl(17, 97%, 53%),
+      -2px 2px 0 hsl(17, 97%, 53%),
+      -1px 1px 0 hsl(17, 97%, 53%)
+    ;
+  }
+  25% {
+    text-shadow:
+      -4px -4px 0 hsl(17, 97%, 53%),
+      -3px -3px 0 hsl(17, 97%, 53%),
+      -2px -2px 0 hsl(17, 97%, 53%),
+      -1px -1px 0 hsl(17, 97%, 53%),
+      4px 4px 0 #da0641,
+      3px 3px 0 #da0641,
+      2px 2px 0 #da0641,
+      1px 1px 0 #da0641
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 #da0641,
+      -3px 3px 0 #da0641,
+      -2px 2px 0 #da0641,
+      -1px 1px 0 #da0641,
+      4px -4px 0 hsl(17, 97%, 53%),
+      3px -3px 0 hsl(17, 97%, 53%),
+      2px -2px 0 hsl(17, 97%, 53%),
+      1px -1px 0 hsl(17, 97%, 53%)
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 hsl(17, 97%, 53%),
+      3px 3px 0 hsl(17, 97%, 53%),
+      2px 2px 0 hsl(17, 97%, 53%),
+      1px 1px 0 hsl(17, 97%, 53%),
+      -4px -4px 0 #da0641,
+      -3px -3px 0 #da0641,
+      -2px -2px 0 #da0641,
+      -1px -1px 0 #da0641
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 #da0641,
+      3px -3px 0 #da0641,
+      2px -2px 0 #da0641,
+      1px -1px 0 #da0641,
+      -4px 4px 0 hsl(17, 97%, 53%),
+      -3px 3px 0 hsl(17, 97%, 53%),
+      -2px 2px 0 hsl(17, 97%, 53%),
+      -1px 1px 0 hsl(17, 97%, 53%)
+    ;
+  }
+}
