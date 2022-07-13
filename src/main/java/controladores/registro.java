@@ -31,7 +31,7 @@ public class registro extends HttpServlet {
 		String uprovincia = request.getParameter("provincia");
 		String ucodpostal = request.getParameter("codpost");
 		RequestDispatcher disp = null;
-		Connection con = null;
+		Connection con = null; 
 		
 	
 		
