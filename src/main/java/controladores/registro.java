@@ -62,7 +62,7 @@ public class registro extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			try {
+			try  {
 				con.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
