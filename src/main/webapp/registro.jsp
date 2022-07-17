@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -23,10 +23,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="../index.jsp">Inicio</a>
+                          <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="../HTML/productos.html">Productos</a>
+                          <a class="nav-link" href="./HTML/productos.html">Productos</a>
                       </li> 
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,25 +34,23 @@
                           </a>
                           
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="../HTML/Impresoras.html">Impresoras</a></li>
-                              <li><a class="dropdown-item" href="../HTML/PCS.html">PCs armadas</a></li>
+                              <li><a class="dropdown-item" href="./HTML/Impresoras.html">Impresoras</a></li>
+                              <li><a class="dropdown-item" href="./HTML/PCS.html">PCs armadas</a></li>
                               
                           </ul>
                       </li>
+                      
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Compras</a>
+                          <a class="nav-link" href="./HTML/PerfilUsuario.html">Perfil</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="../HTML/PerfilUsuario.html">Perfil</a>
+                          <a class="nav-link" href="./HTML/Carrito.html">Carrito</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="../HTML/Carrito.html">Carrito</a>
+                          <a class="nav-link" href="./HTML/MediosDePago.html">Medios de Pago</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="../HTML/MediosDePago.html">Medios de Pago</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="../HTML/login.html">Ingreso Usuario</a>
+                          <a class="nav-link" href="./login.jsp">Ingreso Usuario</a>
                       </li>
                   </ul>
                   <form class="d-flex">
@@ -70,7 +68,7 @@
 			no usamos id con getelementbyid -->
 		
         <main class="container" style="margin-top: 3%;">
-            <form class="row g-3 needs-validation" novalidate method="post" action="register">
+            <form class="row g-3 needs-validation" novalidate method="post" action="registro">
                 <div class="col-md-4" style="text-align: center;">
                   <label for="validationDefault01" class="form-label">Nombre</label>
                   <input type="text" name="nombre" class="form-control" id="Nombre" required>
@@ -190,7 +188,7 @@
                 		
                 <div class="col-12">
                 	<input type="submit" name="signup" id="signup"
-									class="form-submit" value="Register" />
+									class="form-submit" value="Registro" />
 									
                   <!-- <button class="btn btn-primary" type="submit" onclick="funcPasoALocalStorage()" >enviar formulario</button> -->
                 </div>

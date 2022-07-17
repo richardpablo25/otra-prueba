@@ -79,6 +79,6 @@ formulario.addEventListener("submit", (e) => {
     
     //datos correctos te mando a Inicio
     alert("Ingreso de datos Correctos");
-    window.location.href ="/index.html";
+    window.location.href ="/index.jsp";
 
 });

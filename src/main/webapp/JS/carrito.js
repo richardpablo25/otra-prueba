@@ -81,7 +81,7 @@ const formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
     localStorage.setItem("Carrito", JSON.stringify(carrito));
-    window.location.href ="./html/MediosDePago.html";
+    window.location.href ="./MediosDePago.html";
 });
 
 

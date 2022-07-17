@@ -25,10 +25,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.jsp">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../HTML/productos.html">Productos</a>
+                            <a class="nav-link" href="./HTML/productos.html">Productos</a>
                         </li> 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,25 +36,24 @@
                             </a>
                             
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="../HTML/Impresoras.html">Impresoras</a></li>
-                                <li><a class="dropdown-item" href="../HTML/PCS.html">PCs armadas</a></li>
+                                <li><a class="dropdown-item" href="./HTML/Impresoras.html">Impresoras</a></li>
+                                <li><a class="dropdown-item" href="./HTML/PCS.html">PCs armadas</a></li>
                                 
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Compras</a>
+                        	<a class="nav-link" href="./HTML/Carrito.html">Carrito</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./HTML/PerfilUsuario.html">Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../HTML/PerfilUsuario.html">Perfil</a>
+                            <a class="nav-link" href="./HTML/Carrito.html">Carrito</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../HTML/Carrito.html">Carrito</a>
+                            <a class="nav-link" href="./HTML/MediosDePago.html">Medios de Pago</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../HTML/MediosDePago.html">Medios de Pago</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../HTML/login.html">Ingreso Usuario</a>
+                            <a class="nav-link" href="./login.jsp">Ingreso Usuario</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -65,8 +64,12 @@
             </div>
         </nav>
     </header>
+    <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
     <!-- CONTENIDO PRINCIPAL -->
     <main>
+    	
+    	
+        
         <div class="container" style="margin-top: 3%">
             <div class="mb-3">
                 <a href="./registro.jsp">
@@ -77,26 +80,27 @@
         </div>    
 
         <div class="container" style="margin-top: 5%;">
-            <p> Usuario Existente </p>
+            <h3> Usuario Existente </h3>
         
-        <!-- FORMULARIO -->
-            <form  id="form">
+        <!-- uso metodo post para enviar a servlet login -->
+            <form  id="form" method="post" action="login">
                 <div class="mb-3">
                     <label for="email" class="form-label ">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">No compartiremos su email.</div>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="username">
+                    <div id="emailHelp" class="form-text"></div>
                     <p class="text-danger mb-2 d-none" id="alertEmail"></p>
                 </div>
                 <div class="mb-3">
                     <label for="pass" class="form-label ">Password</label>
-                    <input type="password" class="form-control" id="pass">
+                    <input type="password" class="form-control" id="pass" name="password">
                     <p class="text-danger mb-2 d-none" id="alertPass"></p>
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="check">
-                    <label class="form-check-label " for="check">Confirmar</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                
+                
+                <div class="form-group form button">
+								<input type="submit" name="signin" id="signin"
+									class="form-submit" value="Ingreso" />
+				</div>
             </form>
         
             <div class="alert alert-success mt-2 d-none" id="alertSuccess"></div>
@@ -129,7 +133,14 @@
      
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        <script src="../JS/login.js"></script>
+        
+        
+        <script type="text/javascript">
+		var status = document.getElementById("status").value;
+		if (status == "failed") {
+			alert("usuario o contraseña incorrecto");
+		}
+		</script>
     </footer>    
 </body>
 </html>

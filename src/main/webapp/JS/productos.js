@@ -9,7 +9,7 @@ const productos = [
     {
         id: 1,
         nombre: "Computadora Intel I3",
-        img: "../imagenes/Pc1.jpg",
+        img: "./imagenes/Pc1.jpg",
         precio: 100,
         descripcion: "Pc Intel I3, 128 Gb RAM, SSD 500GB, kit gabineta mouse y teclado",
         stock: 10
@@ -17,7 +17,7 @@ const productos = [
     {
         id: 2,
         nombre: "Computadora Intel I5",
-        img: "../imagenes/Pc2.jpg",
+        img: "./imagenes/Pc2.jpg",
         precio: 150,
         descripcion: "Pc Intel I5, 128 Gb RAM, SSD 500GB, kit gabineta mouse y teclado",
         stock: 10  
@@ -25,7 +25,7 @@ const productos = [
     {
         id: 3,
         nombre: "Impresora Canon",
-        img: "../imagenes/canon.jpg",
+        img: "./images/canon.jpg",
         precio: 100,
         descripcion: "Impresora a color multifunción Canon Pixma G3110 con wifi negra 110V/220V",
         stock: 10
@@ -33,7 +33,7 @@ const productos = [
     {
         id: 4,
         nombre: "Impresora HP",
-        img: "../imagenes/hp.jpg",
+        img: "./imagenes/hp.jpg",
         precio: 100,
         descripcion: "Impresora a color multifunción HP Deskjet Ink  2775 con wifi 100V/240V",
         stock: 10
@@ -41,7 +41,7 @@ const productos = [
     {
         id: 5,
         nombre: "Volante",
-        img: "../imagenes/tumb_30260_1.jpeg",
+        img: "./imagenes/tumb_30260_1.jpeg",
         precio: 100,
         descripcion: "Volante Logitech G1000 con pedalera para PS4 y PC",
         stock: 10
@@ -49,7 +49,7 @@ const productos = [
     {
         id: 6,
         nombre: "Motherboard",
-        img: "../imagenes/tumb_34214_5.jpeg",
+        img: "./imagenes/tumb_34214_5.jpeg",
         precio: 150,
         descripcion: "Motherboard Intel 1200 11 gen Gamming ",
         stock: 10  
@@ -57,7 +57,7 @@ const productos = [
     {
         id: 7,
         nombre: "Notebook",
-        img: "../imagenes/tumb_40990_1.jpeg",
+        img: "./imagenes/tumb_40990_1.jpeg",
         precio: 100,
         descripcion: "Notebook HP AERO I5 8 Gb ram SSD 512 Gb Garantía ",
         stock: 10
@@ -65,7 +65,7 @@ const productos = [
     {
         id: 8,
         nombre: "Placa Video",
-        img: "../imagenes/tumb_placa-video-AMD-Radeon-OC_39803_1.jpeg",
+        img: "./imagenes/tumb_placa-video-AMD-Radeon-OC_39803_1.jpeg",
         precio: 100,
         descripcion: "Placa de video LHR Geforce RTX 3090 24 Gb Phantom",
         stock: 10
@@ -143,7 +143,7 @@ const generarcards =(productos) => {
     formulario.addEventListener("submit", (evento) => {
         evento.preventDefault();
         localStorage.setItem("Carrito", JSON.stringify(carrito));
-        window.location.href ="./html/Carrito.html";
+        window.location.href ="./Carrito.html";
     });
 
 
